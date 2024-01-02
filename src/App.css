@@ -1,38 +1,176 @@
-.App {
+/* 영화 목록 컨테이너 스타일 */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* 미디어 쿼리를 사용하여 반응형 디자인 적용 */
+@media (max-width: 1200px) {
+  .movies-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .movies-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 영화 카드의 크기가 너무 클 경우를 대비하여 최대 너비 설정 */
+.movie-card {
+  max-width: 300px;
+}
+
+/* 기본 글꼴과 배경 설정 */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* 모든 링크의 기본 스타일 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 영화 카드 스타일 */
+.movie-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 영화 이미지 스타일 */
+.movie-card img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* 영화 제목 스타일 */
+.movie-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+/* 영화 장르 리스트 스타일 */
+.movie-genres {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-genres li {
+  display: inline;
+  margin-right: 10px;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+/* 기본 글꼴과 배경 설정 */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* 모든 링크의 기본 스타일 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #333;
   color: white;
+  padding: 10px 0;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* 영화 카드 스타일 */
+.movie-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 영화 이미지 스타일 */
+.movie-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* 영화 제목 스타일 */
+.movie-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+/* 영화 장르 리스트 스타일 */
+.movie-genres {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-genres li {
+  display: inline;
+  margin-right: 10px;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* "The Movies!" 텍스트 스타일 */
+.title {
+  text-align: center;
+  font-size: 3rem; /* 큰 글꼴 크기로 설정 */
+  color: white; /* 검정색으로 설정 */
+  font-weight: bold; /* 글꼴 굵기를 굵게 설정 */
+  margin-top: 2rem; /* 위쪽 여백 추가 */
+  margin-bottom: 2rem; /* 아래쪽 여백 추가 */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* 텍스트 그림자 효과를 밝은 색으로 설정 */
+  transition: transform 0.3s ease; /* 호버 효과를 위한 트랜지션 설정 */
+}
+
+/* 호버 시 텍스트 효과 */
+.title:hover {
+  transform: scale(1.05); /* 마우스를 올렸을 때 텍스트를 약간 확대 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+/* 영화 평점 별 스타일 */
+.movie-rating {
+  color: #ffcc00; /* 별의 색상을 노란색으로 설정 */
+  font-size: 2rem; /* 별의 크기 설정 */
+  text-align: right; /* 별을 중앙으로 정렬 */
+  margin-top: 5px; /* 별과 제목 사이의 여백 설정 */
 }
