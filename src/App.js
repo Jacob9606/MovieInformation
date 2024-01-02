@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/movie/:id" element={<Detail />} />
         <Route path="/movie" element={<Navigate replace to="/" />} />
-        <Route path="/" element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
       </Routes>
     </Router>
   );
